@@ -1,23 +1,36 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <header-component :title="title" ></header-component>
     <router-view/>
   </div>
 </template>
 
 <script>
+import Header from 'components/Header'
 export default {
-  name: 'app'
+  name: 'app',
+  data: () => ({
+    title: '表情包分享平台'
+  }),
+  components: {
+    'header-component': Header
+  }
 }
 </script>
 
 <style>
+body, html{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  padding: 0px;
+  margin: 0px;
 }
 </style>
