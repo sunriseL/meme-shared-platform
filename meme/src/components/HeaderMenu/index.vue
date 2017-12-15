@@ -1,7 +1,9 @@
 <template>
+<div>
 <header>
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
         <el-menu-item index="1">首页</el-menu-item>
+        <span class="header-title">{{ title }}</span>
         <el-menu-item index="2"><el-input v-model="input" placeholder="请输入内容"></el-input></el-menu-item>
         <el-submenu index="3">
           <template slot="title">我的工作台</template>
@@ -12,12 +14,18 @@
         <el-menu-item index="4">123</el-menu-item>
       </el-menu>
 </header>
+</div>
 </template>
 
 <script>
 export default {
-  name: 'Header',
-  props: ['title']
+  name: 'HeaderMenu',
+  props: ['title'],
+  methods: {
+    handleSelect: () => {
+
+    }
+  }
 }
 </script>
 

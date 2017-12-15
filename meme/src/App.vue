@@ -6,14 +6,14 @@
 </template>
 
 <script>
-import Header from 'components/Header'
+import HeaderMenu from '@/components/HeaderMenu'
 export default {
   name: 'app',
   data: () => ({
     title: '表情包分享平台'
   }),
   components: {
-    'header-component': Header
+    'header-component': HeaderMenu
   }
 }
 </script>
