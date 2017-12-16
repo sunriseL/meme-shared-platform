@@ -1,7 +1,17 @@
 <template>
   <div id="app">
-    <header-component :title="title" ></header-component>
-    <router-view/>
+    <div class="page-layout">
+      <div class="page-layout-inner">
+        <header-component :title="title" />
+        <main>
+          <div class="main-content">
+            <el-row class="container">
+              <router-view></router-view>
+            </el-row>
+          </div>
+        </main>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -18,7 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss'>
 body, html{
   margin: 0px;
   padding: 0px;
@@ -33,4 +43,5 @@ body, html{
   padding: 0px;
   margin: 0px;
 }
+@import './style.scss'
 </style>
