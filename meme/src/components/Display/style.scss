@@ -1,12 +1,33 @@
 .display{
 }
+.card {
+  display: block;
+  padding-bottom: 20px;
+}
+el-carousel {
 
-.el-carousel__item  {
+  background-color: #000000;
+}
+.el-carousel__item {
+  @include respond-to('sm', 'xs') {
+      margin-left: 0px;
+  }
+  @include respond-to('lg') {
+      margin-left: 170px;
+  }
+  width: 300px;
+  box-shadow: inset 0 0 0 0 $grey,0 8px 4px 0 rgba(47,61,73,.1);
+}
+
+.el-carousel__item img {
+  height: 300px;
+  width: 300px;
   color: #475669;
   font-size: 18px;
   opacity: 0.75;
-  line-height: 300px;
-  margin: 0;
+  line-height: 0px;
+  margin: 0px;
+  box-shadow: inset 0 0 0 0 $grey,0 2px 1px 0 rgba(47,61,73,.1);
 }
 
 .el-carousel__item:nth-child(2n) {

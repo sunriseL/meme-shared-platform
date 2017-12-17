@@ -1,14 +1,18 @@
 <template>
 <div class="dispaly">
-  <el-carousel :interval="5000" arrow="always">
-    <el-carousel-item v-for="item in items" :key="item">
-      <img :src="item.url" alt="">
+  <div class="card">
+  <el-carousel :interval="50000" type="card" arrow="hover" width="10px">
+    <el-carousel-item v-for="(item, index) in items" :key="index"  label="表情包" >
+      <img :src="item.url" alt="" >
     </el-carousel-item>
   </el-carousel>
+  </div>
+  <block :pictures="pictures"></block>
 </div>
 </template>
 
 <script>
+import Block from 'components/Block'
 export default {
   name: 'Display',
   props: ['title'],
@@ -20,12 +24,74 @@ export default {
   data: () => ({
     items: [
       {
-        url: 'static/1.jpg'
+        url: 'static/1.jpg',
+        text: '狗狗我'
       }, {
-        url: 'static/2.png'
+        url: 'static/2.png',
+        text: 'pingu'
+      }, {
+        url: 'static/3.jpg',
+        text: '熊猫'
+      }, {
+        url: 'static/4.jpg',
+        text: '熊猫'
+      }
+    ],
+    pictures: [
+      {
+        url: 'static/1.jpg',
+        text: '狗狗我'
+      }, {
+        url: 'static/2.png',
+        text: 'pingu'
+      }, {
+        url: 'static/3.jpg',
+        text: '熊猫'
+      }, {
+        url: 'static/4.jpg',
+        text: '熊猫'
+      }, {
+        url: 'static/1.jpg',
+        text: '狗狗我'
+      }, {
+        url: 'static/2.png',
+        text: 'pingu'
+      }, {
+        url: 'static/3.jpg',
+        text: '熊猫'
+      }, {
+        url: 'static/4.jpg',
+        text: '熊猫'
+      }, {
+        url: 'static/1.jpg',
+        text: '狗狗我'
+      }, {
+        url: 'static/2.png',
+        text: 'pingu'
+      }, {
+        url: 'static/3.jpg',
+        text: '熊猫'
+      }, {
+        url: 'static/4.jpg',
+        text: '熊猫'
+      }, {
+        url: 'static/1.jpg',
+        text: '狗狗我'
+      }, {
+        url: 'static/2.png',
+        text: 'pingu'
+      }, {
+        url: 'static/3.jpg',
+        text: '熊猫'
+      }, {
+        url: 'static/4.jpg',
+        text: '熊猫'
       }
     ]
-  })
+  }),
+  components: {
+    'block': Block
+  }
 }
 </script>
 

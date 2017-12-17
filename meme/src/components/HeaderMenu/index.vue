@@ -25,7 +25,11 @@ export default {
     handleSelect: () => {
 
     }
-  }
+  },
+  data: () => ({
+    activeIndex: '0',
+    input: '搜索'
+  })
 }
 </script>
 
