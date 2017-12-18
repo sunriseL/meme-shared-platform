@@ -1,8 +1,8 @@
 <template>
   <div class="block">
   <el-row v-for="(col, index1) in pics" :key="index1" >
-  <el-col :span="4" v-for="(el, index) in col"  :key="index" style="padding:10px">
-    <el-card :body-style="{ padding: '10px' }">
+  <el-col :span="4" v-for="(el, index) in col"  :key="index" style="padding:5px">
+    <el-card :body-style="{ padding: '0px' }">
       <img :src="el.url" class="image">
       <div style="padding: 14px;">
         <span class="text">{{el.text}}</span>
