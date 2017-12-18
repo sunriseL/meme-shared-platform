@@ -5,7 +5,7 @@
     <el-card :body-style="{ padding: '10px' }">
       <img :src="el.url" class="image">
       <div style="padding: 14px;">
-        <span>{{el.text}}</span>
+        <span class="text">{{el.text}}</span>
         <div class="bottom clearfix">
           <time class="time" style="padding-bottom: 10px">{{ currentDate.toDateString() }}</time>
           <el-button type="text" class="button">操作按钮</el-button>

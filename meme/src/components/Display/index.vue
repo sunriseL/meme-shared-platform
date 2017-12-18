@@ -35,6 +35,9 @@ export default {
       }, {
         url: 'static/4.jpg',
         text: '熊猫'
+      }, {
+        url: 'static/5.gif',
+        text: '萌豚'
       }
     ],
     pictures: [
@@ -51,8 +54,8 @@ export default {
         url: 'static/4.jpg',
         text: '熊猫'
       }, {
-        url: 'static/1.jpg',
-        text: '狗狗我'
+        url: 'static/5.gif',
+        text: '萌豚'
       }, {
         url: 'static/2.png',
         text: 'pingu'

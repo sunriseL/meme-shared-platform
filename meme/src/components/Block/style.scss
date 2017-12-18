@@ -4,11 +4,23 @@
   color: #999;
 }
 
+.text{
+  @include respond-to('xs','sm') {
+      display: none;
 
+  }
+  @include respond-to('md', 'lg') {
+      font-size: 16px;
+      display: inherit;
+  }
+}
 
 .bottom {
   @include respond-to('sm', 'xs') {
       display: none;
+  }
+  @include respond-to('md', 'lg') {
+      display: block;
   }
   margin-top: 13px;
   line-height: 12px;
