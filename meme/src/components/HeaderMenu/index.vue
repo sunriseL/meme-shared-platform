@@ -1,13 +1,17 @@
 <template>
 <div>
 <header>
-      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+      <el-menu 
+       :default-active="activeIndex" 
+       class="el-menu-demo" 
+       mode="horizontal" 
+       @select="handleSelect">
         <el-menu-item index="1">首页</el-menu-item>
         <span class="header-title">{{ title }}</span>
         <el-menu-item index="2"><el-input v-model="input" placeholder="请输入内容"></el-input></el-menu-item>
-        <el-submenu index="3">
+        <el-submenu @command="handleCommand" index="3">
           <template slot="title">我的工作台</template>
-          <el-menu-item index="3-1">选项1</el-menu-item>
+          <el-menu-item command="imgUpload" index="3-1">上传图片</el-menu-item>
           <el-menu-item index="3-2">选项2</el-menu-item>
           <el-menu-item index="3-3">选项3</el-menu-item>
         </el-submenu>
@@ -22,10 +26,15 @@ export default {
   name: 'HeaderMenu',
   props: ['title'],
   methods: {
-    handleSelect: () => {
-
+    handleSelect: (key, keyPath) => {
+      if (key === '3') {
+        if (keyPath === '3-1') {
+          console.log('img uploading')
+        }
+      }
     }
   },
+
   data: () => ({
     activeIndex: '0',
     input: '搜索'
