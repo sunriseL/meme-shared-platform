@@ -22,6 +22,9 @@ header {
         transform: translate3d($sidebar-size, 0, 0)!important;
     }
     */
+    router-link{
+      text-decoration:none;
+    }
     .el-menu {
         border-radius: 0;
         background-color: #5cacee;
@@ -31,7 +34,14 @@ header {
         transform: translate3d(0, 0, 0)!important;
         width: 100%;
     }
-
+    .menu{
+      @include respond-to('sm', 'xs') {
+          display: none;
+      }
+      @include respond-to('lg', 'md') {
+          display: auto;
+      }
+    }
     .header-navicon {
         display: flex;
         align-items: center;
@@ -51,16 +61,30 @@ header {
         color : $white;
         // width: 600px;
     }
-
+    .header-search {
+      @include respond-to('sm', 'xs') {
+          width: 100px;
+      }
+      @include respond-to('lg', 'md') {
+          width: auto;
+      }
+    }
     .header-title {
         font-size: 24px;
         color: $white;
-        margin-left: 0;
+        margin: 0;
         line-height: 60px;
-        /*
-        @include respond-to('lg') {
-            margin-left: 24px;
+
+        @include respond-to('sm', 'xs') {
+            display: none
         }
-        */
+        @include respond-to('lg', 'md') {
+            display: block;
+        }
+
+    }
+    .user-profile{
+      text-decoration:none;
+      float : right!important;
     }
 }
