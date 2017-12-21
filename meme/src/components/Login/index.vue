@@ -16,16 +16,24 @@
             </el-form-item>
           </el-col>
           </el-row>
-            <el-button type="primary" v-bind:disabled="formName.beDisabled">登录</el-button>
+            <router-link to="/display">
+              <el-button type="primary" v-bind:disabled="formName.beDisabled" @click="login(),jump()">登录</el-button>
+            </router-link>
         </el-form>
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: 'Login',
   props: [],
   methods: {
+    ...mapActions(['login']),
+    jump: () => {
+      console.log(this)
+      this.$route.push({path: '/display'})
+    },
     resetForm: () => {
       this.formName.user = ''
       this.formName.password = ''
