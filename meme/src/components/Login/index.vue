@@ -31,8 +31,6 @@ export default {
   methods: {
     ...mapActions(['login']),
     jump: () => {
-      console.log(this)
-      this.$route.push({path: '/display'})
     },
     resetForm: () => {
       this.formName.user = ''
