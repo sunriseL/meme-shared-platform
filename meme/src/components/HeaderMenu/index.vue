@@ -3,7 +3,7 @@
 <header>
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :router="true">
         <el-menu-item  index="display">首页</el-menu-item>
-        <el-menu-item class="header-search"index="display"><el-input v-model="input" placeholder="请输入内容"></el-input></el-menu-item>
+        <el-menu-item :route="''" class="header-search"index=""><el-input v-model="input" placeholder="请输入内容"></el-input></el-menu-item>
         <el-submenu class="menu" index="3">
           <template slot="title">我的工作台</template>
           <el-menu-item index="3-1">选项1</el-menu-item>
@@ -32,7 +32,7 @@ export default {
       },
       loginRoute: state => {
         if (state.ui.isLogin) {
-          return {path: '/'}
+          return {path: '/user'}
         } else {
           return {path: '/login'}
         }
