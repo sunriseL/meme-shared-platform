@@ -1,5 +1,5 @@
 <template>
-<div>
+
 <header>
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :router="true">
         <el-menu-item  index="display">首页</el-menu-item>
@@ -14,7 +14,7 @@
         <span class="header-title">{{ title }}</span>
       </el-menu>
 </header>
-</div>
+
 </template>
 
 <script>

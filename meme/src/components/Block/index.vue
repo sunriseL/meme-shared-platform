@@ -7,8 +7,8 @@
       <div style="padding: 14px;">
         <span class="text">{{el.text}}</span>
         <div class="bottom clearfix">
-          <time class="time" style="padding-bottom: 10px">{{ currentDate.toDateString() }}</time>
-          <el-button type="text" class="button">操作按钮</el-button>
+          <el-tag>{{el.text}}</el-tag>
+          <el-tag>{{el.text}}</el-tag>
         </div>
       </div>
     </el-card>

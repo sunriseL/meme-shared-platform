@@ -1,12 +1,16 @@
 <template>
-  <div class="user-profile">
-    <el-row type="flex" class="row-bg top" justify="center">
-      <el-col :span="16">
-        <div  style="border-top-left-radius:50px">
-        <img  class="avatar" src="static/1.jpg" alt="">
-      </div>
-      </el-col>
-</el-row>
+  <div id="user-page">
+    <el-row>
+    <el-col :span="6">
+        <img class="to" id="avatar" alt="aaa" src="static/5.gif">
+    </el-col>
+    <el-col :span="6">
+      <p id="head">已收藏表情</p>
+    </el-col>
+    <el-col :span="12">
+      <p id="head">已收藏表情</p>
+    </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -15,11 +19,15 @@ export default {
   name: 'UserProfile',
   props: [],
   methods: {
+    sidebarOpened: () => {
 
+    }
   },
   data: () => ({
 
-  })
+  }),
+  components: {
+  }
 }
 </script>
 

@@ -1,6 +1,24 @@
-.user-profile {
-  margin:0;
+#user-page {
+  z-index:0;
+  position:static;
+  margin:0px;
+  background-color: #e0ffff;
+  #avatar{
+    //border:5px solid #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height:200px;
+    box-shadow: -4px 2px 10px 6px #eeeeee ;
+  }
+  #head{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .to {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
 }
-.avatar{
-  border-top-left-radius:50px
 }
