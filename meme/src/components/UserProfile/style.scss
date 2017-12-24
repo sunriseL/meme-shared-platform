@@ -1,0 +1,44 @@
+#user-page {
+  color:#999999;
+  z-index:0;
+  position:static;
+  margin:0px;
+  //background-color: #e0ffff;
+  .info{
+    margin-left: 10px;
+  }
+  #avatar{
+    //border:5px solid #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height:200px;
+    box-shadow: -4px 2px 10px 6px #eeeeee ;
+  }
+  #head{
+    margin:0;
+    padding:20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  #introduction{
+    text-align:left;
+    font-size:15px;
+  }
+  .to {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+  .favourite{
+
+  }
+  .top-head{
+    margin:20px;
+  }
+  #upload-button{
+    margin-top:5px;
+    float:right;
+  }
+}

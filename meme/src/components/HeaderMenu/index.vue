@@ -1,34 +1,44 @@
 <template>
-<div>
+
 <header>
-      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1">首页</el-menu-item>
+      <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :router="true">
+        <el-menu-item  index="display">首页</el-menu-item>
+        <el-menu-item :route="''" class="header-search"index=""><el-input v-model="input" placeholder="请输入内容"></el-input></el-menu-item>
+        <el-menu-item  :route="loginRoute" class="user-profile" index="display">{{ isLogin?user:log }}</el-menu-item>
         <span class="header-title">{{ title }}</span>
-        <el-menu-item index="2"><el-input v-model="input" placeholder="请输入内容"></el-input></el-menu-item>
-        <el-submenu index="3">
-          <template slot="title">我的工作台</template>
-          <el-menu-item index="3-1">选项1</el-menu-item>
-          <el-menu-item index="3-2">选项2</el-menu-item>
-          <el-menu-item index="3-3">选项3</el-menu-item>
-        </el-submenu>
-        <el-menu-item index="4">123</el-menu-item>
       </el-menu>
 </header>
-</div>
+
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'HeaderMenu',
   props: ['title'],
   methods: {
-    handleSelect: () => {
 
-    }
+  },
+  computed: {
+    ...mapState({
+      isLogin: state => {
+        return state.ui.isLogin
+      },
+      loginRoute: state => {
+        if (state.ui.isLogin) {
+          return {path: '/user'}
+        } else {
+          return {path: '/login'}
+        }
+      }
+    })
   },
   data: () => ({
     activeIndex: '0',
-    input: '搜索'
+    input: '',
+    routerAvaliable: true,
+    log: '登录',
+    user: '个人中心'
   })
 }
 </script>
