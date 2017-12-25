@@ -9,7 +9,7 @@
       <p id="introduction">用户介绍</p>
     </el-col>
     <el-col :span="12">
-      <p id="head">已收藏表情</p>
+      <p id="head">最近关注表情</p>
     </el-col>
     </el-row>
     <div class="favourite">
