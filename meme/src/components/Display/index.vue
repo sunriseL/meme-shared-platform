@@ -15,11 +15,8 @@
 import Block from 'components/Block'
 export default {
   name: 'Display',
-  props: ['title'],
+  props: [],
   methods: {
-    handleSelect: () => {
-
-    }
   },
   data: () => ({
     items: [
