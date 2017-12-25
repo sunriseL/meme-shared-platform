@@ -19,7 +19,7 @@
     <div class="upload">
       <div class="top-head">
       <span id="head">已上传表情</span>
-      <el-button id="upload-button">上传</el-button>
+      <router-link :to="{path: '/upload', name: 'Upload'}"><el-button id="upload-button">上传</el-button></router-link>
       </div>
     <block :pictures="pictures"></block>
     </div>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import 'element-ui/lib/theme-chalk/display.css';
+import 'element-ui/lib/theme-chalk/display.css'
 import Block from 'components/Block'
 export default {
   name: 'UserProfile',
@@ -36,6 +36,10 @@ export default {
   methods: {
     sidebarOpened: () => {
 
+    },
+    turnToUpload: () => {
+      console.log(this)
+      this.$routes.go('/upload')
     }
   },
   data: () => ({

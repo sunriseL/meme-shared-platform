@@ -1,7 +1,6 @@
 <template>
 
 <header>
-<<<<<<< HEAD
       <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :router="true">
         <el-menu-item  index="display">首页</el-menu-item>
         <el-menu-item :route="''" class="header-search"index=""><el-input v-model="input" placeholder="请输入内容"></el-input></el-menu-item>
@@ -17,7 +16,7 @@ import { mapState } from 'vuex'
 export default {
   name: 'HeaderMenu',
   props: ['title'],
-  methods: 
+  methods: {
 
   },
   computed: {
